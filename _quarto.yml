@@ -2,9 +2,9 @@ project:
   type: book
 
 book:
-  title: "LSE_Test_LROJAS"
-  author: "Jane Doe"
-  date: "5/2/2023"
+  title: "LSE Data Analysis Test"
+  author: "Lothar Mateo Rojas Sosa"
+  date: "`r format(Sys.time(), '%d %B %Y')`"
   chapters:
     - index.qmd
     - intro.qmd
