@@ -2,9 +2,24 @@ project:
   type: book
 
 book:
-  title: "LSE Data Analysis Test"
-  author: "Lothar Mateo Rojas Sosa"
-  date: "`r format(Sys.time(), '%d %B %Y')`"
+  title: "Data Analysis Test"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      The test was written by Lothar Rojas (April, 2023).
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  sidebar:
+    background: "#EFF2F4"
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: code-square
+        href: https://github.com/crispydoggo/LSE_RA_LRojas
+        text: "Source Code"
+
   chapters:
     - index.qmd
     - intro.qmd
@@ -15,7 +30,7 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: [litera, theme.scss]
   pdf:
     documentclass: scrreprt
 
