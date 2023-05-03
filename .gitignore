@@ -1,0 +1,17 @@
+# Ignore all data files
+*.csv
+*.xls*
+*.xlsx*
+*.json
+*.sql
+*.xml
+*.txt
+*.log
+
+# Basic R Set up
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/.quarto/
