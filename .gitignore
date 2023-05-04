@@ -7,6 +7,7 @@
 *.xml
 *.txt
 *.log
+*.dta
 
 # Basic R Set up
 .Rproj.user

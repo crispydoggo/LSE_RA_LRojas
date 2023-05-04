@@ -1,9 +1,10 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+Nice to meet you! :)
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+I'm Lothar Mateo; I decided to present the results on this website to make understanding the code and analysis workflow easier.
 
-```{r}
-1 + 1
-```
+You can consult the GitHub repository by clicking the </> icon at the left side of the page down the LSE logo. 
+
+I hope you enjoy the report!
+
