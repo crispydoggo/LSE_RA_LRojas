@@ -1036,7 +1036,8 @@ Note
 </div>
 </div>
 <p><strong>Answer:</strong> I don’t have enough time for algebra, so I’ll try a deductive approach.</p>
-<p>As stated by <a href="http://fmwww.bc.edu/EC-P/wp1053.pdf">Ferri, 2022</a>, the essence of the Shift-Share approach is to decompose the endogenous explanatory variable as an accounting identity with multiple component parts; preserve that which is most exogenous in the accounting identity, and neutralize that which is most endogenous. Endogeneity is neutralized via delocalizations over space and time. That is, the more endogenous component - the Shift vector - is replaced with nonlocal averages (a strong delocalization); and the more exogenous component - the Share vector - is lagged (a weaker delocalization).</p>
+<p>As stated by <a href="http://fmwww.bc.edu/EC-P/wp1053.pdf">Ferri, 2022</a>, the essence of the Shift-Share approach is to decompose the endogenous explanatory variable as an accounting identity with multiple component parts; preserve that which is most exogenous in the accounting identity, and neutralize that which is most endogenous.</p>
+<p>Endogeneity is neutralized via delocalizations over space and time. That is, the more endogenous component - the Shift vector - is replaced with nonlocal averages (a strong delocalization); and the more exogenous component - the Share vector - is lagged (a weaker delocalization).</p>
 <p>Ferri frames the structure of a shift-share instrument: <span class="math display">\[
 \tilde{\mathrm{X}}_{\mathrm{t}, \mathrm{z}}=\sum_0 \overbrace{\mathrm{X}_{\mathrm{o}, \mathrm{t}}}^{\text {Shift }} \cdot \overbrace{\mathrm{N}_{\mathrm{o}, \tau, \mathrm{Z}} / \mathrm{N}_{\tau, \mathrm{z}}}^{\text {Share }}
 \]</span></p>
@@ -1059,16 +1060,42 @@ Note
 \]</span> where <span class="math inline">\(\gamma_{c z}\)</span> are CZ fixed effects, <span class="math inline">\(\gamma_t\)</span> are year fixed effects, and <span class="math inline">\(\varepsilon_{c z, t}\)</span> is an error term. Pick any <span class="math inline">\(\hat{Z}_{c z, t}^i\)</span> to instrument <span class="math inline">\(\hat{X}_{c z, t}\)</span>. Use the OLS and IV estimators with fixed effects. Cluster the standard errors at the CZ-year level. Present a table with four columns: the OLS, the First Stage, the Reduced Form, and the IV regressions. Ensure to include the coefficient of interest, standard error, number of observations, first stage F statistic, and <span class="math inline">\(R^2\)</span>.</p>
 </div>
 </div>
+<p>The strategy is to use <a href="https://cran.r-project.org/web/packages/ShiftShareSE/ShiftShareSE.pdf">Kolesá’sr</a> package <code>ShiftShareSE</code> to avoid the problems anticipated in questions 5-6 regarding the OLS regressor and the correct assumptions to estimate the causal effect.</p>
+<p>Yet, I didn’t have enough time to review which is the appropriate formula to implement fixed-effects or how to shape the data so it can fit the equation and function.</p>
 </section>
 <section id="question-5" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="question-5">Question 5</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Discuss in less than 150 words the main concerns to interpret <span class="math inline">\(\beta\)</span> as a causal estimate with the OLS estimator.</p>
-<p>According to <a href="https://economics.harvard.edu/files/economics/files/ms29827.pdf">Adão et. al (2019)</a> regression residuals are correlated across regions with similar sectoral shares, independently of their geographic location.</p>
+</div>
+</div>
+<p>According to <a href="https://economics.harvard.edu/files/economics/files/ms29827.pdf">Adão et al.&nbsp;(2019)</a> regression residuals are correlated across regions with similar sectoral shares, independently of their geographic location.</p>
 </section>
 <section id="question-6" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="question-6">Question 6</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Considering the results of the regressions, discuss in less than 300 words the assumptions for the IV estimator to causally estimate <span class="math inline">\(\beta\)</span> and how you can assess them with the results you obtained.</p>
-<p>According to <a href="https://economics.harvard.edu/files/economics/files/ms29827.pdf">Adão et. al (2019)</a>, to estimate the causal effect of regional factors using shift-share designs, several assumptions need to be met, including:</p>
+</div>
+</div>
+<p>According to <a href="https://economics.harvard.edu/files/economics/files/ms29827.pdf">Adão et al.&nbsp;(2019)</a>, to estimate the causal effect of regional factors using shift-share designs, several assumptions need to be met, including:</p>
 <ul>
 <li><p>Exclusion restriction: The regional factor of interest must only affect the outcome variable through its effect on the regional component of the shift-share analysis and not through other channels.</p></li>
 <li><p>Monotonicity: The shift-share weights must be monotonic in the regional variable, meaning that regions with higher values of the regional variable must have higher weights than regions with lower values.</p></li>
@@ -1078,7 +1105,21 @@ Note
 </section>
 <section id="question-7" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="question-7">Question 7</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Given your last response, discuss in less than 300 words the relevance of the instrument interpreting the different tests’ statistics and if the IV strategy works in this context.</p>
+</div>
+</div>
+<p>I’m out of time :(</p>
+<p>This is my first time reading and implementing Shift-Share instruments; I could have delivered a more structured document with more time and preparation. Sorry for the inconvenience while reading the report.</p>
 
 
 </section>

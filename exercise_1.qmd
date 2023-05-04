@@ -432,24 +432,6 @@ The strategy is to use [Kolesá'sr](https://cran.r-project.org/web/packages/Shi
 
 Yet, I didn't have enough time to review which is the appropriate formula to implement fixed-effects or how to shape the data so it can fit the equation and function.
 
-```{r}
-#| eval: false
-#| message: false
-#| warning: false
-#| output: true
-
-library(ShiftShareSE)
-
-formula <- as.formula( "outcome ~ explanatory" )
-
-# Incomplete :( 
-
-# reg_ss( formula , X = z_3, data = model, region_cvar = CZ, , method = "all")
-
-
-```
-
- 
 
 ## Question 5 {.unnumbered}
 
