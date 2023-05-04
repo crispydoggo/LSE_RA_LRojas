@@ -451,18 +451,22 @@ formula <- as.formula( "outcome ~ explanatory" )
 
  
 
-
-
 ## Question 5 {.unnumbered}
 
+::: {.callout-note}
 Discuss in less than 150 words the main concerns to interpret $\beta$ as a causal estimate with the OLS estimator.
+:::
+
 
 According to  [Adão  et al. (2019) ](https://economics.harvard.edu/files/economics/files/ms29827.pdf)   regression residuals are correlated across regions with similar sectoral shares, independently of their geographic location. 
 
 
 ## Question 6 {.unnumbered}
 
+::: {.callout-note}
 Considering the results of the regressions, discuss in less than 300 words the assumptions for the IV estimator to causally estimate $\beta$ and how you can assess them with the results you obtained.
+:::
+
 
 According to  [Adão  et al. (2019) ](https://economics.harvard.edu/files/economics/files/ms29827.pdf), to estimate the causal effect of regional factors using shift-share designs, several assumptions need to be met, including:
 
