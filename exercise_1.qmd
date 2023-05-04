@@ -433,7 +433,7 @@ The strategy is to use [Kolesá'sr](https://cran.r-project.org/web/packages/Shi
 Yet, I didn't have enough time to review which is the appropriate formula to implement fixed-effects or how to shape the data so it can fit the equation and function.
 
 ```{r}
-#| echo: true
+#| eval: false
 #| message: false
 #| warning: false
 #| output: true
